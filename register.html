@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Create your free AIET Academy account." />
+  <title>Register — AIET Academy</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="auth.css" />
+</head>
+<body>
+  <!-- ============ HEADER / NAV ============ -->
+  <header class="site-header">
+    <nav class="navbar" aria-label="Primary navigation">
+      <a href="index.html#home" class="logo" aria-label="AIET Academy home">
+        <span class="logo-mark">AIET</span>
+        <span class="logo-text">Academy</span>
+      </a>
+      <ul class="nav-menu" id="nav-menu" style="max-height:none;position:static;flex-direction:row;">
+        <li><a href="index.html#courses">Courses</a></li>
+        <li><a href="index.html#studentlab">StudentLab</a></li>
+        <li class="nav-auth">
+          <a href="login.html" class="btn btn-ghost">Login</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ============ REGISTER ============ -->
+  <main class="auth-main">
+    <div class="auth-card">
+      <a href="index.html" class="auth-back">← Back to home</a>
+
+      <div class="auth-head">
+        <h1>Create your account</h1>
+        <p>Join AIET Academy and start learning today.</p>
+      </div>
+
+      <form class="auth-form" id="register-form" novalidate>
+        <div class="form-message" id="form-message" role="alert"></div>
+
+        <div class="field">
+          <label for="name">Full name</label>
+          <input type="text" id="name" name="name" placeholder="Your full name" required autocomplete="name" />
+          <span class="field-error" id="name-error"></span>
+        </div>
+
+        <div class="field">
+          <label for="email">Email address</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" required autocomplete="email" />
+          <span class="field-error" id="email-error"></span>
+        </div>
+
+        <div class="field">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" placeholder="At least 6 characters" required minlength="6" autocomplete="new-password" />
+          <span class="field-error" id="password-error"></span>
+        </div>
+
+        <div class="field">
+          <label for="confirm">Confirm password</label>
+          <input type="password" id="confirm" name="confirm" placeholder="Re-enter your password" required minlength="6" autocomplete="new-password" />
+          <span class="field-error" id="confirm-error"></span>
+        </div>
+
+        <div class="field">
+          <label style="flex-direction:row;display:inline-flex;gap:.4rem;align-items:center;font-weight:500;color:var(--slate);">
+            <input type="checkbox" id="terms" name="terms" />
+            I agree to the Terms of Service and Privacy Policy
+          </label>
+          <span class="field-error" id="terms-error"></span>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-lg auth-submit">Create Account</button>
+      </form>
+
+      <p class="auth-alt">Already have an account? <a href="login.html">Log in here</a></p>
+
+      <p class="auth-note">
+        Demo only — this form validates input but does not create a real
+        account yet.
+      </p>
+    </div>
+  </main>
+
+  <script src="auth.js"></script>
+</body>
+</html>
