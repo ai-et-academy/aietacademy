@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Log in to your AIET Academy account." />
+  <title>Login — AIET Academy</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="auth.css" />
+</head>
+<body>
+  <!-- ============ HEADER / NAV ============ -->
+  <header class="site-header">
+    <nav class="navbar" aria-label="Primary navigation">
+      <a href="index.html#home" class="logo" aria-label="AIET Academy home">
+        <span class="logo-mark">AIET</span>
+        <span class="logo-text">Academy</span>
+      </a>
+      <ul class="nav-menu" id="nav-menu" style="max-height:none;position:static;flex-direction:row;">
+        <li><a href="index.html#courses">Courses</a></li>
+        <li><a href="index.html#studentlab">StudentLab</a></li>
+        <li class="nav-auth">
+          <a href="register.html" class="btn btn-primary">Register</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ============ LOGIN ============ -->
+  <main class="auth-main">
+    <div class="auth-card">
+      <a href="index.html" class="auth-back">← Back to home</a>
+
+      <div class="auth-head">
+        <h1>Welcome back</h1>
+        <p>Log in to continue your learning journey.</p>
+      </div>
+
+      <!-- novalidate lets our JS handle messages consistently -->
+      <form class="auth-form" id="login-form" novalidate>
+        <div class="form-message" id="form-message" role="alert"></div>
+
+        <div class="field">
+          <label for="email">Email address</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" required autocomplete="email" />
+          <span class="field-error" id="email-error"></span>
+        </div>
+
+        <div class="field">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" placeholder="Enter your password" required minlength="6" autocomplete="current-password" />
+          <span class="field-error" id="password-error"></span>
+        </div>
+
+        <div class="auth-row">
+          <label><input type="checkbox" id="remember" name="remember" /> Remember me</label>
+          <a href="#">Forgot password?</a>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-lg auth-submit">Log In</button>
+      </form>
+
+      <p class="auth-alt">Don't have an account? <a href="register.html">Register here</a></p>
+
+      <p class="auth-note">
+        Demo only — this form validates input but does not connect to a real
+        account system yet.
+      </p>
+    </div>
+  </main>
+
+  <script src="auth.js"></script>
+</body>
+</html>
