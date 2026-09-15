@@ -65,7 +65,12 @@ img, svg { display: block; max-width: 100%; }
   justify-content: space-between;
   gap: 1rem;
 }
-.logo { display: flex; align-items: baseline; gap: .3rem; font-weight: 800; }
+.logo { display: flex; align-items: center; gap: .5rem; font-weight: 800; }
+.flag {
+  flex: none;
+  border-radius: 4px;
+  box-shadow: 0 0 0 1px rgba(0,0,0,.08);
+}
 .logo-mark {
   background: var(--blue);
   color: #fff;
